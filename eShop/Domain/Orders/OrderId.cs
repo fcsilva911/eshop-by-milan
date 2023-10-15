@@ -2,6 +2,11 @@
 {
     public class OrderId
     {
-        public int Id { get; set; }
+        public OrderId(Guid id)
+        {
+            Id = id;
+        }
+
+        public Guid Id { get; private set; }
     }
 }
