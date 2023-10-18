@@ -2,5 +2,9 @@
 {
     public class Money
     {
+        public Money()
+        {
+            
+        }
     }
 }
