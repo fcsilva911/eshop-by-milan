@@ -23,8 +23,11 @@ namespace Application.Abstractions.Behaviors
             // validate
             var context = new ValidationContext<TRequest>(request);
 
-            var errors = _validators
-                .Select(validator => validator.Validate(context))
+            var validationFailures = await Task.WhenAll(
+                _validators
+                    .Select(validator => validator.ValidateAsync(context)));
+
+            var errors = validationFailures
                 .Where(validationResult => !validationResult.IsValid)
                 .SelectMany(validationResult => validationResult.Errors)
                 .Select(validationFailure => new ValidationError(

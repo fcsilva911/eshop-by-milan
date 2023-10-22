@@ -1,10 +1,13 @@
-﻿using MediatR;
+﻿using Application.Abstractions.Messaging;
 
 namespace Application.Products.Create
 {
-    internal record CreateProductCommand(
+    public record CreateProductCommand(
         string Name,
+        string Sku,
         string Currency,
-        string Amount,
-        string Sku) : IRequest<Guid>;
+        string Amount
+        ) : ICommand<Guid>;
+
+    public record CreateProductRequest(string Name, string Sku, string Currency, string Amount);
 }
