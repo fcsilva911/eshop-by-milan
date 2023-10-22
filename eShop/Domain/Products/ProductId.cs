@@ -2,6 +2,11 @@
 {
     public class ProductId
     {
-        public int Id { get; set; }
+        public ProductId(Guid id)
+        {
+            Id = id;
+        }
+
+        public Guid Id { get; private set; }
     }
 }
