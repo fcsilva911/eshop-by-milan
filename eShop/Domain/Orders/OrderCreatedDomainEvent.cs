@@ -2,7 +2,5 @@
 
 namespace Domain.Orders
 {
-    public class OrderCreatedDomainEvent : DomainEvent
-    {
-    }
+    public record OrderCreatedDomainEvent(Guid Id, OrderId OrderId) : DomainEvent(Id);
 }

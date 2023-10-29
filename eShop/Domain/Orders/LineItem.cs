@@ -1,6 +1,6 @@
-﻿namespace Domain.Orders
+﻿using Domain.Products;
+
+namespace Domain.Orders
 {
-    public class LineItem
-    {
-    }
+    public record LineItem(LineItemId Id, OrderId OrderId, ProductId ProductId, Money Price);
 }

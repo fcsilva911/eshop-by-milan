@@ -2,6 +2,11 @@
 {
     public class CustomerId
     {
-        public int Id { get; set; }
+        public CustomerId(Guid value)
+        {
+            Value = value;
+        }
+
+        public Guid Value { get; set; }
     }
 }

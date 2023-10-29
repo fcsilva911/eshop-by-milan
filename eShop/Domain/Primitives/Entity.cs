@@ -21,7 +21,7 @@
 
         protected void Raise(DomainEvent domainEvent)
         {
-            // TODO
+            _domainEvents.Add(domainEvent);
         }
     }
 }

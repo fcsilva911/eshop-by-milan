@@ -2,6 +2,11 @@
 {
     public class LineItemId
     {
-        public int Id { get; set; }
+        public LineItemId(Guid id)
+        {
+            Id = id;
+        }
+
+        public Guid Id { get; set; }
     }
 }

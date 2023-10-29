@@ -2,7 +2,5 @@
 
 namespace Domain.Orders
 {
-    public class LineItemRemovedDomainEvent : DomainEvent
-    {
-    }
+    public record LineItemRemovedDomainEvent(Guid Id, OrderId OrderId, LineItemId LineItemId) : DomainEvent(Id);
 }

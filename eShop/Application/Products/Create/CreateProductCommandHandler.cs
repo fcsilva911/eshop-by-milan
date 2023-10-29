@@ -1,4 +1,5 @@
-﻿using Domain.Products;
+﻿using Domain.Primitives;
+using Domain.Products;
 using MediatR;
 
 namespace Application.Products.Create

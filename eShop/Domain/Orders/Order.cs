@@ -55,9 +55,10 @@ namespace Domain.Orders
             {
                 return;
             }
-            _lineItems.Remove(lineItem);
-        }
 
-        // TODO
+            _lineItems.Remove(lineItem);
+
+            Raise(new LineItemRemovedDomainEvent(Guid.NewGuid(), Id, lineItem.Id));
+        }
     }
 }

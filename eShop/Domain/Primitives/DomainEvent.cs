@@ -1,6 +1,6 @@
-﻿namespace Domain.Primitives
+﻿using MediatR;
+
+namespace Domain.Primitives
 {
-    public class DomainEvent
-    {
-    }
+    public record DomainEvent(Guid Id) : INotification;
 }

@@ -1,6 +1,4 @@
 ﻿namespace Domain.Orders
 {
-    public class OrderSummary
-    {
-    }
+    public record OrderSummary(Guid Id, Guid CustomerId, decimal TotalPrice);
 }

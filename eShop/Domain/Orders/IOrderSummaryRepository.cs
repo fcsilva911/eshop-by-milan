@@ -2,5 +2,6 @@
 {
     public interface IOrderSummaryRepository
     {
+        void Add(OrderSummary orderSummary);
     }
 }

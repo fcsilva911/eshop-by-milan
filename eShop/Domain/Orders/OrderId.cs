@@ -4,9 +4,9 @@
     {
         public OrderId(Guid id)
         {
-            Id = id;
+            Value = id;
         }
 
-        public Guid Id { get; private set; }
+        public Guid Value { get; private set; }
     }
 }
